@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Support ./vendor/bin/pulo composer
 
+### Changed
+- Merubah cli option dari 'kontent' menjadi 'konten'
+
 ## [0.1.0] - 2021-06-06
 ### Added
 - Pulo.dev in cli write using php

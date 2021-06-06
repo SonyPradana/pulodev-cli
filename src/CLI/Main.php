@@ -35,7 +35,7 @@ class Main extends Command
     // option 0 action name
     // option 1 action type
    switch ($option[0] ?? 'kontent') {
-    case 'kontent':
+    case 'konten':
       // get media filter
       $filter_media = $option[1] ?? '*';
 
@@ -128,13 +128,13 @@ class Main extends Command
           "  ", $this->textDim("--version"), "\t\tMenampilkan versi saat ini\n",
         "\n",
         "Option:\n",
-          "  ", $this->textGreen("kontent"), "\t\t", "Menampilkan article tanpa filter\n",
-          "  ", $this->textGreen("kontent"), ":tulisan", "\t", "Menampilkan article dengan filter - tulisan\n",
-          "  ", $this->textGreen("kontent"), ":web", "\t\t", "Menampilkan article dengan filter - web\n",
-          "  ", $this->textGreen("kontent"), ":video", "\t\t", "Menampilkan article dengan filter - video\n",
-          "  ", $this->textGreen("kontent"), ":tool", "\t\t", "Menampilkan article dengan filter - tool\n",
-          "  ", $this->textGreen("kontent"), ":podcast", "\t", "Menampilkan article dengan filter - podcast\n",
-          "  ", $this->textGreen("kontent"), ":???", "\t\t", "Menampilkan article dengan filter\n",
+          "  ", $this->textGreen("konten"), "\t\t", "Menampilkan article tanpa filter\n",
+          "  ", $this->textGreen("konten"), ":tulisan", "\t", "Menampilkan article dengan filter - tulisan\n",
+          "  ", $this->textGreen("konten"), ":web", "\t\t", "Menampilkan article dengan filter - web\n",
+          "  ", $this->textGreen("konten"), ":video", "\t\t", "Menampilkan article dengan filter - video\n",
+          "  ", $this->textGreen("konten"), ":tool", "\t\t", "Menampilkan article dengan filter - tool\n",
+          "  ", $this->textGreen("konten"), ":podcast", "\t", "Menampilkan article dengan filter - podcast\n",
+          "  ", $this->textGreen("konten"), ":???", "\t\t", "Menampilkan article dengan filter\n",
         "\n",
         "Argument:\n",
           "  ", "view/page", "\t\t", "view: jumlah data yg akan ditampilkan\n", 
@@ -142,8 +142,8 @@ class Main extends Command
           "  ", $this->textDim("--query=???"), "\t\t", "Menampilkan data dengan memfilter query", 
         "\n\n",
         "Contoh:\n",
-          "  ", $this->textYellow("php"), " pulo kontent:tulisan 2/1 ", $this->textDim("--query=js"), "\n",
-          "  ", $this->textYellow("php"), " pulo kontent:tulisan 2/1 ", $this->textDim('--query="start up"'),
+          "  ", $this->textYellow("php"), " pulo konten:tulisan 2/1 ", $this->textDim("--query=js"), "\n",
+          "  ", $this->textYellow("php"), " pulo konten:tulisan 2/1 ", $this->textDim('--query="start up"'),
 
         "\n\n"
         ;
