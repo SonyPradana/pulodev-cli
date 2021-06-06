@@ -16,4 +16,13 @@ composer dump-autoload
 # Then, use it:
 php pulo konten 3/1
 ```
+
+## 🔥 Composer ready
+```bash
+# First, install composer:
+composer require pulodev/cli:dev-master
+
+# Then, use it:
+.\vendor\bin\pulo konten 3/1
+```
 **Pulodev**-cli  [MIT license](LICENSE.md). Kontribusi terbuka

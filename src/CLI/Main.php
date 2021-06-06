@@ -7,7 +7,7 @@ class Main extends Command
   /**
    * Current Version Application
    */
-  const Version = 0.1;
+  const Version = "0.1.2";
 
   /**
    * Fungsi utama untuk meanggil pulodev cli
@@ -108,10 +108,10 @@ class Main extends Command
 
       break;
     
-    case '--help':
     case "--version":
       echo "\nPulo.dev cli version ", Main::Version, "\n\n";
       break;
+    case '--help':
       
     default:
       echo
