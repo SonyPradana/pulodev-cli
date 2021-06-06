@@ -3,6 +3,7 @@
     "description": "Read Pulo.dev feeds in terminal",
     "keywords": ["cli", "polodev", "newsfeeds"],
     "license": "MIT",
+    "bin": ["pulo"],
     "authors": [
         {
             "name": "Angger Pradana",
