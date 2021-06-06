@@ -10,7 +10,7 @@ class Main extends Command
   const Version = 0.1;
 
   /**
-   * Fungsi utama untuk meanggil pulo.dev cli
+   * Fungsi utama untuk meanggil pulodev cli
    * @param array $args
    *  Argument untuk di parse di terminal ($argv, default array from php cli)
    */
