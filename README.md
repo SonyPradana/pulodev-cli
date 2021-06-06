@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SonyPradana/pulo.dev-cli/master/image/pulo.dev-cli.png" width="600" alt="pulo.dev cli">
+  <img src="https://raw.githubusercontent.com/SonyPradana/pulo.dev-cli/master/image/pulo.dev-cli.PNG" width="600" alt="pulo.dev cli">
 </p>
 
 ## **Pulo.Dev** in command-line
