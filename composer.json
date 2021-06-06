@@ -1,0 +1,19 @@
+{
+    "name": "pulodev/cli",
+    "description": "Pulo.dev feeds in cli",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Angger Pradana",
+            "email": "sonypradana@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Pulodev\\": "src/"
+        }
+    }
+}
