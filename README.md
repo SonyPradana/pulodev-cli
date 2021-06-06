@@ -10,7 +10,7 @@ adalah alat baris perintah yang memberi Anda akses ke artike dari [polo.dev](htt
 # First, clone this repo:
 git clone https://github.com/SonyPradana/pulodev-cli
 
-## Generete auto load
+# Generete auto load
 composer dump-autoload
 
 # Then, use it:
