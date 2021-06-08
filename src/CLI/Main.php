@@ -7,7 +7,7 @@ class Main extends Command
   /**
    * Current Version Application
    */
-  const Version = "0.1.2";
+  const Version = "0.1.3";
 
   /**
    * Fungsi utama untuk meanggil pulodev cli
@@ -23,9 +23,9 @@ class Main extends Command
     // args 4 argumnrt3
 
     $watch_start = microtime(true);
-    
+
     $option = $args[1] ?? '';
-    $option = explode(':', $option); 
+    $option = explode(':', $option);
 
     // default option
     $limit_view = 1;
@@ -42,12 +42,12 @@ class Main extends Command
       // mancari letak argument
       $query_match =  false;
       $page_match = false;
-      for ($i=1; $i < 10; $i++) { 
+      for ($i=1; $i < 10; $i++) {
         $argumnt_switcher = explode('=', $args[$i] ?? '=');
         switch ($argumnt_switcher[0]) {
           case '--query':
             // mengambil nilai pertama
-            if (!$query_match) {              
+            if (!$query_match) {
               // get query filter
               $query = $args[$i] ?? '--query=';
               $query = explode('=', $query);
@@ -56,7 +56,7 @@ class Main extends Command
             }
             break;
         }
-        
+
         // get pegination
         if (!$page_match) {
           $is_page = explode('/', $args[$i] ?? '//');
@@ -64,7 +64,7 @@ class Main extends Command
             $limit_view = $is_page[0] ?? 1;
             $page = $is_page[1] ?? 1;
             $page_match = true;
-          }          
+          }
         }
       }
 
@@ -76,7 +76,7 @@ class Main extends Command
 
       // fetch data
       $feeds = PuloDev::filterKontent($filter_media, $limit_view, $query);
-      
+
       // page not found
       if (count($feeds['data']) == 0) {
         echo "\n", $this->paddingLeft(2), $this->textRed("404 tidak ada hasil\n\n");
@@ -107,12 +107,12 @@ class Main extends Command
         "\n\n";
 
       break;
-    
+
     case "--version":
       echo "\nPulo.dev cli version ", Main::Version, "\n\n";
       break;
     case '--help':
-      
+
     default:
       echo
         "\n",
@@ -137,9 +137,9 @@ class Main extends Command
           "  ", $this->textGreen("konten"), ":???", "\t\t", "Menampilkan article dengan filter\n",
         "\n",
         "Argument:\n",
-          "  ", "view/page", "\t\t", "view: jumlah data yg akan ditampilkan\n", 
+          "  ", "view/page", "\t\t", "view: jumlah data yg akan ditampilkan\n",
             "\t\t\t", "page: halaman saat ini, ex:2/1\n",
-          "  ", $this->textDim("--query=???"), "\t\t", "Menampilkan data dengan memfilter query", 
+          "  ", $this->textDim("--query=???"), "\t\t", "Menampilkan data dengan memfilter query",
         "\n\n",
         "Contoh:\n",
           "  ", $this->textYellow("php"), " pulo konten:tulisan 2/1 ", $this->textDim("--query=js"), "\n",
@@ -147,7 +147,7 @@ class Main extends Command
 
         "\n\n"
         ;
-        break;    
+        break;
     }
   }
 }

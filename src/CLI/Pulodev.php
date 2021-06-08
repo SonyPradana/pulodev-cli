@@ -17,15 +17,29 @@ class PuloDev
    */
   public static function getData(string $url)
   {
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HEADER, false);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    $respone = curl_exec($ch);
-    if ($respone === false) return false;
-    curl_close($ch);
+    if (function_exists("curl_version")) {
+      // menggunakan curl jika mendukung ext-curl
+      $ch = curl_init($url);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_HEADER, false);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+      $respone = curl_exec($ch);
+      if ($respone === false) return false;
+      curl_close($ch);
 
-    return $respone;
+      return $respone;
+    }
+
+    // menggunakan file get content
+    $opts = array(
+      'http'=>array(
+        'method' => "GET",
+        'header' => "Content-Type: application/json\r\n"
+      )
+    );
+
+    $context = stream_context_create($opts);
+    return file_get_contents($url, false, $context);
   }
 
   /**

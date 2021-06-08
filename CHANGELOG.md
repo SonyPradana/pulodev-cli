@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Support ./vendor/bin/pulo composer
 
+### Fix
+- Dukungan apabila curl extention tidak tersedia menggunakan file_get_contents()
+
 ### Changed
 - Merubah cli option dari 'kontent' menjadi 'konten'
 
