@@ -64,7 +64,7 @@ class Command
   protected function paddingLeft(int $size = 2, string $indent_type = " ")
   {
     $indent = str_repeat(' ', $size);
-    return $indent . "\e[242m|\e[0m" . $indent;
+    return $indent . "\e[2m|\e[0m" . $indent;
   }
 
   protected function newLine(int $count = 1): string

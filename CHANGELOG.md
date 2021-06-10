@@ -7,12 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Support ./vendor/bin/pulo composer
+- Support global install composer
+- Support pagination view
+- Support self update using composer
 
 ### Fix
 - Dukungan apabila curl extention tidak tersedia menggunakan file_get_contents()
+- error saat satu argument commandline tidak terformat dengan baik (pagination)
 
 ### Changed
 - Merubah cli option dari 'kontent' menjadi 'konten'
+- Splin code echo class Main mendaji perfungsi command
+- Merubah parameter di class PuloDev mendadi parameter option, karena arugment terlalu panjang
 
 ## [0.1.0] - 2021-06-06
 ### Added
