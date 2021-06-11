@@ -7,7 +7,7 @@ class Main extends Command
   /**
    * Current Version Application
    */
-  const Version = "0.2.3";
+  const Version = "0.2.1";
 
   /**
    * Fungsi utama untuk meanggil pulodev cli
@@ -38,7 +38,7 @@ class Main extends Command
 
     case '-u':
     case "--update";
-      $this->printUpdateCommand();
+      $this->printUpdateCommand($args);
       break;
 
     case '-h':
@@ -145,7 +145,7 @@ class Main extends Command
       "\n\n";
   }
 
-  private function printUpdateCommand()
+  private function printUpdateCommand(array $args)
   {
     $update_option = $args[2] ?? '';
     switch ($update_option) {
