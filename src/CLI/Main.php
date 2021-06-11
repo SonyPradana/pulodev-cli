@@ -151,7 +151,16 @@ class Main extends Command
     switch ($update_option) {
       case '-g':
       case '-global':
-        echo "\n", shell_exec("composer global update pulodev/cli:dev-master"), "\n";
+        $latest = $args[3] ?? '';
+        $latest_command = $latest == '-latest'
+          ? ":dev-master"
+          : "";
+
+        echo
+          "\n", $this->textYellow("Running "), "composer global update pulodev/cli", $latest_command, "\n",
+          $this->textDim("...\n"),
+          shell_exec("composer global update pulodev/cli" . $latest_command), "\n";
+
         break;
 
       default:
@@ -173,10 +182,11 @@ class Main extends Command
         "  ", $this->textYellow("php"), " pulo [option] ", $this->textDim("[argumnets]"),
       "\n\n",
       "Flags:\n",
-        "  ", $this->textDim("--help"), "\t\tMenampilkan Daftar bantuan\n",
-        "  ", $this->textDim("--version"), "\t\tMenampilkan versi saat ini\n",
-        "  ", $this->textDim("--update"), "\t\tSelf update menggunakan composer\n",
-        "  ", $this->textDim("--update -global"), "\tSelf update menggunakan composer global\n",
+        "  ", $this->textDim("--help"), "\t\t\tMenampilkan Daftar bantuan\n",
+        "  ", $this->textDim("--version"), "\t\t\tMenampilkan versi saat ini\n",
+        "  ", $this->textDim("--update"), "\t\t\tSelf update menggunakan composer\n",
+        "  ", $this->textDim("--update -global"), "\t\tSelf update menggunakan composer global\n",
+        "  ", $this->textDim("--update -global -latest"), "\tSelf update menggunakan composer global versi latest\n",
       "\n",
       "Option:\n",
         "  ", $this->textGreen("konten"), "\t\t", "Menampilkan article tanpa filter\n",

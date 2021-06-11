@@ -20,7 +20,7 @@ php pulo konten 3/1
 ## 🔥 Composer ready
 ```bash
 # First, install composer:
-composer require pulodev/cli:dev-master
+composer require pulodev/cli
 
 # Then, use it:
 .\vendor\bin\pulo konten 3/1
